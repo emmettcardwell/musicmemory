@@ -1,14 +1,14 @@
 header {
   width: 100;
   background-color: #31b0f5;
-  padding: 30px;
+  padding: 20px;
   top: 0;
   margin-bottom: 30px;
 }
 
 #backlink {
   background-color: #31b0f5;
-  padding: 5px;
+  padding: 8px;
   color: white;
   font-weight: bold; 
   border: 2px solid blue;
