@@ -1,0 +1,8 @@
+@font-face {
+  font-family: f;
+  src: url(/musicmemory/files/font.ttf);
+}
+
+body {
+  font-family: f; 
+}
