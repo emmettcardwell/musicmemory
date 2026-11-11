@@ -56,7 +56,17 @@
             color: #3fa314;
             background: white;
         }
-    
+            .button-container {
+                text-align: center;
+                margin: 20px auto;
+                width: 100%;
+            }
+            
+            #answer-table {
+                width: 100%;
+                margin: 20px auto;
+                text-align: center;
+            }
         </style>
     </head>
 
@@ -76,18 +86,20 @@
         </tr>
     </table>
         <br>
-        <div style = "display: inline-block;">
-            <button id = "button1" onclick = "x()">Generate Excerise</button>
-            <button id = "button2" onclick = "cx()">Check</button>
-            <br>
-            <table>
-        <tr>
-            <td><strong>Answer</strong></td>
-        </tr>
-        <tr>
-            <td id = "ans">Start By Answering a Question...</td>
-        </tr>
-    </table>
+        <div class="button-container">
+            <button id="button1" onclick="x()">Generate Exercise</button>
+            <button id="button2" onclick="cx()">Check</button>
+        
+            <br><br>
+        
+            <table id="answer-table">
+                <tr>
+                    <td><strong>Answer</strong></td>
+                </tr>
+                <tr>
+                    <td id="ans">Start By Answering a Question...</td>
+                </tr>
+            </table>
         </div>
       <script>
         const l1 = [
