@@ -37,12 +37,20 @@
         <header><a id = "backlink" href = "/musicmemory/index.html">Back</a>
     </header>
     <table>
-        <td><input id = "i1"></td>
-        <td><input id = "i2"></td>
-        <td><input id = "i3"></td>
+        <tr><strong>
+            <td>Composer</td>
+            <td>Major Work></td>
+            <td>Selection</td>
+        </strong></tr>
+        <tr>
+            <td><input id = "i1"></td>
+            <td><input id = "i2"></td>
+            <td><input id = "i3"></td>
+        </tr>
     </table>
+        <button onclick = "x()">Generate Excerise</button>
       <script>
-        const composer = [
+        const l1 = [
   "Bach",
   "Barber",
   "Beach",
@@ -65,7 +73,7 @@
   "Mozart"
 ];
 
-const majorWork = [
+const l2 = [
   "Cantata No. 147",
   "Commando March",
   "Four Sketches In Autumn",
@@ -88,7 +96,7 @@ const majorWork = [
   "Symphony No. 41, Jupiter"
 ];
 
-const selection = [
+const l3 = [
   "Jesu, Joy of Man's Desiring",
   "",
   "",
@@ -114,8 +122,27 @@ const selection = [
           function x() {
               let id = Math.floor(Math.random() * 20);
               let rd = Math.floor(Math.random() * 2);
-              if rd
-              document.getElementById('i1').value
+              document.getElementById('i1').disabled = true;
+              document.getElementById('i2').disabled = true;
+              document.getElementById('i3').disabled = true;
+              document.getElementById('i1').value = "";
+              document.getElementById('i2').value = "";
+              document.getElementById('i3').value = "";
+              if rd == 0 {
+                  document.getElementById('i2').value = l2[id];
+                  document.getElementById('i3').value = l3[id];
+                  document.getElementById('i1').disabled = false;
+              }
+              if rd == 1 {
+                  document.getElementById('i1').value = l1[id];
+                  document.getElementById('i3').value = l3[id];
+                  document.getElementById('i2').disabled = false;
+              }
+              if rd == 2 {
+                  document.getElementById('i1').value = l2[id];
+                  document.getElementById('i3').value = l3[id];
+                  document.getElementById('i3').disabled = false;
+              }
           }
       </script>
     </body>
