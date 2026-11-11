@@ -23,7 +23,7 @@
           }
          input {
              background: #ebebeb;
-             border: none;
+             border: 2px #ebebeb;
              width: 100%;
              height: 100%;
              font-size: 30px;
@@ -132,20 +132,26 @@ const l3 = [
               document.getElementById('i1').value = "";
               document.getElementById('i2').value = "";
               document.getElementById('i3').value = "";
+              document.getElementById('i1').style.border-color = "#ebebeb";
+              document.getElementById('i2').style.border-color = "#ebebeb";
+              document.getElementById('i3').style.border-color = "#ebebeb";
               if (rd == 0) {
                   document.getElementById('i2').value = l2[id];
                   document.getElementById('i3').value = l3[id];
                   document.getElementById('i1').disabled = false;
+                  document.getElementById('i1').style.border-color = "green";
               }
               if (rd == 1) {
                   document.getElementById('i1').value = l1[id];
                   document.getElementById('i3').value = l3[id];
                   document.getElementById('i2').disabled = false;
+                  document.getElementById('i2').style.border-color = "green";
               }
               if (rd == 2) {
                   document.getElementById('i1').value = l1[id];
                   document.getElementById('i3').value = l3[id];
                   document.getElementById('i3').disabled = false;
+                  document.getElementById('i3').style.border-color = "green";
               }
           }
       </script>
