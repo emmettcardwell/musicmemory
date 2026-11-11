@@ -78,7 +78,15 @@
         <br>
         <div style = "display: inline-block;">
             <button id = "button1" onclick = "x()">Generate Excerise</button>
-            <button id = "button2" onclick = "check()">Check</button>
+            <button id = "button2" onclick = "cx()">Check</button>
+            <table>
+        <tr>
+            <td><strong>Answer</strong></td>
+        </tr>
+        <tr>
+            <td id = "ans"></td>
+        </tr>
+    </table>
         </div>
       <script>
         const l1 = [
@@ -149,10 +157,11 @@ const l3 = [
   "Liebestraum No. 3",
   "Movement 3"
 ];
-
+let rd;
+let id;
           function x() {
-              let id = Math.floor(Math.random() * 20);
-              let rd = Math.floor(Math.random() * 3);
+              id = Math.floor(Math.random() * 20);
+              rd = Math.floor(Math.random() * 3);
               document.getElementById('i1').disabled = true;
               document.getElementById('i2').disabled = true;
               document.getElementById('i3').disabled = true;
@@ -179,6 +188,18 @@ const l3 = [
                     document.getElementById('i2').value = l2[id];
                     document.getElementById('i3').disabled = false;
                     document.getElementById('i3').style.borderColor = "green";
+                }
+          }
+
+          function cx() {
+              if (rd == 0) {
+                  document.getElementById('ans').innerHTML = l1[id];
+              }
+              if (rd == 1) {
+                  document.getElementById('ans').innerHTML = l2[id];
+              }
+              if (rd == 2) {
+                    document.getElementById('ans').innerHTML = l3[id];
                 }
           }
       </script>
