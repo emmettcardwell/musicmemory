@@ -39,7 +39,7 @@
     <table>
         <tr><strong>
             <td>Composer</td>
-            <td>Major Work></td>
+            <td>Major Work</td>
             <td>Selection</td>
         </strong></tr>
         <tr>
@@ -121,25 +121,25 @@ const l3 = [
 
           function x() {
               let id = Math.floor(Math.random() * 20);
-              let rd = Math.floor(Math.random() * 2);
+              let rd = Math.floor(Math.random() * 3);
               document.getElementById('i1').disabled = true;
               document.getElementById('i2').disabled = true;
               document.getElementById('i3').disabled = true;
               document.getElementById('i1').value = "";
               document.getElementById('i2').value = "";
               document.getElementById('i3').value = "";
-              if rd == 0 {
+              if (rd == 0) {
                   document.getElementById('i2').value = l2[id];
                   document.getElementById('i3').value = l3[id];
                   document.getElementById('i1').disabled = false;
               }
-              if rd == 1 {
+              if (rd == 1) {
                   document.getElementById('i1').value = l1[id];
                   document.getElementById('i3').value = l3[id];
                   document.getElementById('i2').disabled = false;
               }
-              if rd == 2 {
-                  document.getElementById('i1').value = l2[id];
+              if (rd == 2) {
+                  document.getElementById('i1').value = l1[id];
                   document.getElementById('i3').value = l3[id];
                   document.getElementById('i3').disabled = false;
               }
