@@ -30,7 +30,19 @@
              text-align: center;
              border-radius: 0px;
          }
-
+        #button1 {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            background: #c4942b;
+            border: 2px solid #c4942b;
+            transition: 0.2s;
+        }
+            #button1:hover {
+            color: #c4942b;
+            background: white;
+        }
     
         </style>
     </head>
@@ -50,7 +62,7 @@
             <td><input id = "i3"></td>
         </tr>
     </table>
-        <button onclick = "x()">Generate Excerise</button>
+        <button id = "button1" onclick = "x()">Generate Excerise</button>
       <script>
         const l1 = [
   "Bach",
